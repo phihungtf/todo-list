@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<title>Todo List</title>
+	</head>
+	<body>
+		<h1 class="title">Stuff I need to do</h1>
+		<div class="all-tasks">
+			<h1 class="task-list-title">My lists</h1>
+			<ul class="task-list" data-lists></ul>
+			<form action="" data-new-list-form>
+				<input
+					data-new-list-input
+					type="text"
+					class="input new-list"
+					placeholder="new list name"
+					aria-label="New list name"
+				/>
+				<button class="btn btn-create" aria-label="create new list">+</button>
+			</form>
+		</div>
+		<div class="todo-list" data-list-display-container>
+			<div class="todo-header">
+				<h2 class="list-title" data-list-title></h2>
+				<div class="task-count" data-list-count></div>
+			</div>
+			<div class="todo-body">
+				<div class="tasks" data-tasks></div>
+				<div class="new-task-creator">
+					<form action="" data-new-task-form>
+						<input
+							data-new-task-input
+							type="text"
+							class="input new-task"
+							placeholder="new task name"
+							aria-label="New task name"
+						/>
+						<button class="btn btn-create" aria-label="create new task">
+							+
+						</button>
+					</form>
+				</div>
+				<div class="delete-stuff">
+					<button class="btn btn-delete" data-clear-complete-tasks-button>
+						Clear completed tasks</button
+					><button class="btn btn-delete" data-delete-list-button>
+						Delete list
+					</button>
+				</div>
+			</div>
+		</div>
+		<template id="task-template">
+			<div class="task">
+				<input type="checkbox" />
+				<label> <span class="custom-checkbox"></span></label>
+			</div>
+		</template>
+	</body>
+</html>
